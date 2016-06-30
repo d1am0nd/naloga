@@ -1,0 +1,13 @@
+<h1>Osebe</h1>
+<div class="row">
+  <div class="col-md-4" ng-repeat="person in people | orderBy:'hours':true">
+    <h3>{{ person.email }}</h3>
+    <ul>
+      <li>Ime: {{ person.name }}</li>
+      <li>Skupno: {{ person.hours }}h</li>
+      <ul>
+        <li ng-repeat="task in person.tasks">Nalog s trajanjem: {{ task.hours }}h</li>
+      </ul>
+    </ul>
+  </div>
+</div>

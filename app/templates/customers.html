@@ -1,0 +1,14 @@
+<h1>Stranke</h1>
+<div class="row">
+  <div class="col-md-4" ng-repeat="customer in customers | orderBy:'hours':true">
+      <ul>
+        <li>Email: {{ customer.email }}</li>
+        <li>Ime: {{ customer.name }}</li>
+        <li>Priimek: {{ customer.surname }}</li>
+        <li>Skupno: {{ customer.hours }}h</li>
+        <ul>
+          <li ng-repeat="task in customer.tasks">Nalog s trajanjem: {{ task.hours }}h</li>
+        </ul>
+      </ul>
+  </div>
+</div>
